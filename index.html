@@ -101,47 +101,47 @@ $(".item").click(function(){
 	if(!thisobj.next().is(":visible")){
 		if($(".select").length > 0){
 			if($(".select").next().length > 0){
-				$(".select").next().animate({width:"hide"},200,function(){
+				$(".select").next().animate({width:"hide"},180,function(){
 					$(".select").removeClass("select");
 					thisobj.addClass("select");
-					thisobj.next().animate({width:"show"},200);
+					thisobj.next().animate({width:"show"},180);
 				});
 			}else{
-				$(".select").prev().animate({width:"hide"},200,function(){
+				$(".select").prev().animate({width:"hide"},180,function(){
 					$(".select").removeClass("select");
 					thisobj.addClass("select");
-					thisobj.next().animate({width:"show"},200);
+					thisobj.next().animate({width:"show"},180);
 				});
 			}
 		}else{
 			thisobj.addClass("select");
-			thisobj.next().animate({width:"show"},200);
+			thisobj.next().animate({width:"show"},180);
 		}
 	}
 	else{
 		thisobj.removeClass("select");
 		$(".item-end").removeClass("select");
-		thisobj.next().animate({width:"hide"},200);
+		thisobj.next().animate({width:"hide"},180);
 	}
 })
 $(".item-end").click(function(){
 	var obj = $(this).prev();
 	if(!obj.is(":visible")){
 		if($(".select").length > 0){
-			$(".select").next().animate({width:"hide"},200,function(){
+			$(".select").next().animate({width:"hide"},180,function(){
 				$(".select").removeClass("select");
 				$(".item-end").addClass("select");
-				obj.animate({width:"show"},200);
+				obj.animate({width:"show"},180);
 			});
 		}else{
 			$(".select").removeClass("select");
 			$(".item-end").addClass("select");
-			obj.animate({width:"show"},200);
+			obj.animate({width:"show"},180);
 		}
 	}
 	else{
 		$(".select").removeClass("select");
-		obj.animate({width:"hide"},200);
+		obj.animate({width:"hide"},180);
 	}
 })
 
